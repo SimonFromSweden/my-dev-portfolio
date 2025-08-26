@@ -1,8 +1,30 @@
-<section className="h-auto">
+<section class="h-auto">
   <img
-    src="images/hero-test.jpg"
-    alt="Hero Image"
-    class="hero-image"
-    class="rounded-lg"
+    [src]="images[currentIndex].src"
+    [alt]="images[currentIndex].alt"
+    class="rounded-lg object-cover h-152 w-full transition-opacity duration-700 ease-in-out"
+    [class.opacity-0]="fadingOut"
   />
+  <div class="absolute top-1/2 left-0 w-full flex justify-between px-8">
+    <button
+      (click)="prevImage()"
+      class="flex items-center justify-center rounded-full bg-white border-2 border-gray-300 px-auto w-7 h-7 cursor-pointer"
+    >
+      <img
+        src="icons/chevron-left.svg"
+        alt="chevron left"
+        class="w-4 h-4 color-gray-300 relative right-[1px] hover:opacity-70"
+      />
+    </button>
+    <button
+      (click)="nextImage()"
+      class="flex items-center justify-center rounded-full bg-white border-2 border-gray-300 px-auto w-7 h-7 cursor-pointer"
+    >
+      <img
+        src="icons/chevron-right.svg"
+        alt="chevron right"
+        class="w-4 h-4 color-gray-300 relative left-[1px] hover:opacity-70"
+      />
+    </button>
+  </div>
 </section>
