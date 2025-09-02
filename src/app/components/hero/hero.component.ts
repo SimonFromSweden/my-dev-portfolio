@@ -1,9 +1,14 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 interface HeroImage {
   src: string;
   alt: string;
+  title: string;
+  description: string;
+  bgColor: string;
+  clickUrl: string;
 }
 
 @Component({
@@ -16,18 +21,37 @@ interface HeroImage {
 export class HeroComponent {
   images: HeroImage[] = [
     {
-      src: 'images/hero-test.jpg',
-      alt: 'ocean',
+      src: 'images/dv-hero-2.png',
+      alt: 'Donna vino project',
+      title: 'Project: Donna Vino',
+      description: 'A full-stack e-commerce web application for a wine store.',
+      bgColor: 'bg-[#fa7878]',
+      clickUrl: 'project-one',
     },
     {
-      src: 'images/hero-test2.jpg',
-      alt: 'splash of color',
+      src: 'images/ds-hero-1.png',
+      alt: 'DiscShop project',
+      title: 'Project: DiscShop',
+      description:
+        'A full-stack e-commerce web application for a disc golf store.',
+      bgColor: 'bg-[#34eba1]',
+      clickUrl: 'project-two',
     },
     {
-      src: 'images/hero-test3.jpg',
-      alt: 'splash of color 2',
+      src: 'images/optima-hero-2.png',
+      alt: 'Optima Roslagen project',
+      title: 'Project: Optima Roslagen',
+      description: 'A mock website for a hotel located in Norrtälje.',
+      bgColor: 'bg-[#F5B027]',
+      clickUrl: 'project-three',
     },
   ];
+
+  constructor(private router: Router) {}
+
+  goToProject(projectRoute: string) {
+    this.router.navigate([`/projects/${projectRoute}`]);
+  }
 
   currentIndex: number = 0;
 
