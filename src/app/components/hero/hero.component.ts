@@ -21,7 +21,7 @@ interface HeroImage {
 export class HeroComponent {
   images: HeroImage[] = [
     {
-      src: 'images/dv-hero-2.png',
+      src: 'images/dv-hero-3.png',
       alt: 'Donna vino project',
       title: 'Project: Donna Vino',
       description: 'A full-stack e-commerce web application for a wine store.',

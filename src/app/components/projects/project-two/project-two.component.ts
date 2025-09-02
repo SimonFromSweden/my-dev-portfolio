@@ -4,8 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-project-two',
   imports: [],
   templateUrl: './project-two.component.html',
-  styleUrl: './project-two.component.css'
+  styleUrl: './project-two.component.css',
 })
 export class ProjectTwoComponent {
-
+  // https://youtu.be/5CQpItCJ_74
 }
