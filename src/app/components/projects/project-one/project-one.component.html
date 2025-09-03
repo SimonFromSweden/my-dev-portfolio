@@ -1,19 +1,19 @@
-<div class="flex">
-  <div>
-    <h3 class="text-xl">Donna Vino Internship</h3>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel aut iure
-      laboriosam reprehenderit illo eveniet odit, quibusdam sint repellat?
-      Consequuntur deserunt corrupti distinctio assumenda qui repellendus
-      accusantium dolorum ab molestiae? Voluptate non magnam asperiores
-      adipisci! Facilis voluptates, ut corporis quod tenetur dolor eum quaerat
-      ducimus quisquam velit animi? Veniam, ea sunt vel nisi suscipit beatae
-      modi iure enim eveniet repudiandae. Sequi, aliquid in.
-    </p>
-    <p><span class="font-500">Link to website: </span></p>
-    <p><span class="font-500">Youtube presentation: </span></p>
-  </div>
-  <div>
-    <img src="images/dv-hero-1.png" alt="Donna Vino" />
-  </div>
-</div>
+<app-project-card
+  [title]="'Donna Vino Website'"
+  [description]="
+    'For 8 months I engaged in the Donna Vino Startup project, aiming to produce a company website as well as an e-commerce solution. The e-commerce website was created as a Headless Shopify-solution using Shopifys e-commerce as a backend and fetching data to the frontend via Shopify Storefront API and graphQL. The frontend was built using Next.js, a React-framework, and TailwindCSS for styling. The project had a design team who created an awesome design in Figma which we followed during the process. The website is fully responsive and optimized for both desktop and mobile devices. The project was developed in a international team with team members from Denmark, Sweden and Italy. I contributed a lot to the frontend, as well as driving the project forward with tasks and project management in the later stages using tools like github projects and discord for communication. I learned a lot about React, teamwork and what it means to build a real world project from scratch.'
+  "
+  [youtubeLink]="'https://youtu.be/KeCY0cbDq8Y'"
+  [websiteLink]="'https://donnavino.dk/'"
+  [imageUrls]="['images/dv-hero-1.png', 'images/dv-hero-2.png']"
+  [devIconUrls]="[
+    'icons/react.svg',
+    'icons/nextjs.svg',
+    'icons/nodejs-alt.svg',
+    'icons/npm.svg',
+    'icons/tailwindcss.svg',
+    'icons/shopify.svg',
+    'icons/figma.svg'
+  ]"
+>
+</app-project-card>
