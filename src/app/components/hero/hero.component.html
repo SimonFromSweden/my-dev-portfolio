@@ -2,18 +2,20 @@
   <img
     [src]="images[currentIndex].src"
     [alt]="images[currentIndex].alt"
-    class="rounded-lg object-top h-152 w-full px-6 transition-opacity duration-700 ease-in-out cursor-pointer hover:opacity-85"
+    class="rounded-lg object-top object-cover h-152 my-3 w-full px-6 transition-opacity duration-700 ease-in-out cursor-pointer hover:opacity-85"
     [class.opacity-0]="fadingOut"
     (click)="goToProject(images[currentIndex].clickUrl)"
   />
   <div
-    class="relative bottom-9 flex justify-center items-center gap-4 {{
+    class="absolute top-1 transform -translate-x-1/2 left-1/2 flex justify-center items-center gap-4 {{
       images[currentIndex].bgColor
-    }} opacity-85 p-4 rounded-lg w-3/5 mx-auto text-center text-white cursor-pointer hover:opacity-100"
+    }} opacity-85 p-4 rounded-lg w-6/7 md:w-4/5 lg:w-3/5 xl:w-2/5 mx-auto text-center text-white cursor-pointer hover:opacity-100"
     (click)="goToProject(images[currentIndex].clickUrl)"
   >
-    <h3 class="text-xl">{{ images[currentIndex].title }}</h3>
-    <p class="text-sm relative top-[1px]">
+    <h3 class="text-sm sm:text-md md:text-xl">
+      {{ images[currentIndex].title }}
+    </h3>
+    <p class="text-xs sm:text-sm relative lg:top-[1px]">
       {{ images[currentIndex].description }}
     </p>
   </div>

@@ -14,4 +14,14 @@ export class ProjectCardComponent {
   @Input() websiteLink: string = '';
   @Input() imageUrls: string[] = [];
   @Input() devIconUrls: string[] = [];
+
+  selectedImage: string | null = null;
+
+  openModal(url: string) {
+    this.selectedImage = url;
+  }
+
+  closeModal() {
+    this.selectedImage = null;
+  }
 }
