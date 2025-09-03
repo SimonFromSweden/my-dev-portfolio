@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 interface HomeImage {
   src: string;
@@ -17,6 +18,7 @@ interface HomeImage {
   styleUrl: './home.component.css',
 })
 export class HomeComponent {
+  constructor(private router: Router) {}
   images: HomeImage[] = [
     {
       src: 'images/react-background.jpg',
@@ -26,20 +28,24 @@ export class HomeComponent {
       clickUrl: 'about',
     },
     {
-      src: 'images/dv-hero-2.png',
-      alt: 'Donna vino project',
-      title: 'Project: Donna Vino',
-      description: 'A full-stack e-commerce web application for a wine store.',
-      clickUrl: 'project-one',
+      src: 'images/projects-home.jpg',
+      alt: 'projects image',
+      title: 'See my projects',
+      description: '',
+      clickUrl: 'projects',
     },
     {
-      src: 'images/dv-hero-2.png',
-      alt: 'Donna vino project',
-      title: 'Project: Donna Vino',
-      description: 'A full-stack e-commerce web application for a wine store.',
-      clickUrl: 'project-one',
+      src: 'images/contact-home.jpg',
+      alt: 'contact image',
+      title: 'Get in touch',
+      description: '',
+      clickUrl: 'contact',
     },
   ];
 
   currentIndex: number = 0;
+
+  navigateTo() {
+    this.router.navigate([this.images[this.currentIndex].clickUrl]);
+  }
 }
