@@ -1,11 +1,11 @@
 <div
-  class="flex items-center justify-center h-152 bg-cover bg-center rounded-2xl"
+  class="flex items-center justify-center h-154 bg-cover bg-center rounded-2xl"
   [style.backgroundImage]="'url(' + images[currentIndex].src + ')'"
 >
   <img
     [src]="images[currentIndex].src"
     [alt]="images[currentIndex].alt"
-    class="h-full cursor-pointer"
+    class="max-h-full max-w-full object-cover cursor-pointer rounded-xl md:rounded-2xl"
     (click)="navigateTo()"
   />
   <h2
@@ -15,22 +15,20 @@
     {{ images[currentIndex].title }}<br />
     {{ images[currentIndex].description }}
   </h2>
-  <div
-    class="flex gap-2 absolute bottom-10 transform -translate-x-1/2 left-1/2"
-  >
+  <div class="flex gap-3 absolute bottom-8 transform -translate-x-1/2 left-1/2">
     <ng-container *ngFor="let img of images; let i = index">
       <img
         *ngIf="currentIndex === i; else emptyDot"
         src="icons/ellipse-full.svg"
         alt="active dot"
-        class="cursor-grab"
+        class="cursor-grab w-3 h-3"
         (click)="currentIndex = i"
       />
       <ng-template #emptyDot>
         <img
           src="icons/ellipse-empty.svg"
           alt="inactive dot"
-          class="cursor-grab"
+          class="cursor-grab w-3 h-3"
           (click)="currentIndex = i"
         />
       </ng-template>
