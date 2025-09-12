@@ -19,3 +19,13 @@
   font-weight: 450;
   font-style: normal;
 }
+
+.color-background {
+  background-image: url("/images/colours.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 300px;
+  width: 100%;
+  color: white;
+}

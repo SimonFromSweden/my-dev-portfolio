@@ -11,6 +11,9 @@ const config: Config = {
         mint: '#34eba1',
         bloodred: '#fa7878',
       },
+      backgroundImage: {
+        colorBackground: "url('/images/colours.jpg')",
+      },
     },
   },
   plugins: [],
