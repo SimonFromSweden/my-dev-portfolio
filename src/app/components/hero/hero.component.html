@@ -2,7 +2,7 @@
   <img
     [src]="images[currentIndex].src"
     [alt]="images[currentIndex].alt"
-    class="rounded-2xl object-top object-cover h-122 sm:h-132 md:h-154 w-full px-6 transition-opacity duration-700 ease-in-out cursor-pointer opacity-45 hover:opacity-65"
+    class="rounded-2xl object-top object-cover h-122 sm:h-132 md:h-154 w-full my-auto px-6 transition-opacity duration-700 ease-in-out cursor-pointer opacity-45 hover:opacity-65"
     [class.opacity-0]="fadingOut"
     (click)="goToProject(images[currentIndex].clickUrl)"
   />
